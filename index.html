@@ -31,15 +31,16 @@
         <div id="functionality-wrapper" class="wrapper">
             <p>Search</p>
             <input type="text" name="search" id="searchbox" placeholder="search">
-            <input type="button" name="export" id="export_button" value="Import Student Pool">
-            <input type="button" name="import" id="import_button" value="Export Student Pool">
+            <input type="button" onclick="exportStudentPool()" name="export" id="export_button" value="Export Student Pool">
+            <input type="button" onclick="importStudentPool()" name="import" id="import_button" value="Import Student Pool">
 
 
             <div id="functionality-info-wrapper">
 
-                <p>Valid Group</p>
+                <p>Valid Group:</p>
                 <p id="valid-group">False</p>
-                <p>Number of students</p>
+                <p>Number of students:</p>
+                <p id="student-number">0</p>
 
             </div>
 

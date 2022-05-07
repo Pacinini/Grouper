@@ -1,7 +1,7 @@
 var studentPool = []
 var groups = []
 var valid = false
-var numberOfGroups = 0
+var numberOfGroups = 2
 
 function newEntry() {
     //if the message from the user isn't empty then run 
@@ -34,12 +34,15 @@ function newEntry() {
         //         document.getElementById("chatlog" + i).innerHTML = messages[messages.length - i];
 
         numberOfGroups = document.getElementById("number_field").value
+        document.getElementById("student-number").innerHTML = studentPool.length
 
-        console.log(studentPool.length, numberOfGroups)
 
         if (studentPool.length > numberOfGroups) {
             valid = true
             document.getElementById("valid-group").innerHTML = "True"
+        } else {
+            valid = false
+            document.getElementById("valid-group").innerHTML = "False"
         }
     }
 }
@@ -84,7 +87,17 @@ function createGroups() {
     }
 }
 
+function importStudentPool() {
 
+    alert("Import doesn't function yet")
+
+}
+
+function exportStudentPool() {
+
+    alert("Export doesn't function yet")
+
+}
 
 
 
@@ -98,6 +111,18 @@ document.getElementById("input-student").addEventListener("keydown", (e) => {
         console.log('enter pressed')
         //runs this function when enter is pressed
         newEntry(document.getElementById("input-student").value);
+        // console.log(document.getElementById("input-student").value)
+  
+    }
+})
+
+document.getElementById("searchbox").addEventListener("keydown", (e) => {
+    // console.log("test")
+    if (e.keyCode == 13) {
+        alert("Searchbox doesn't function yet")
+        // console.log('enter pressed')
+        //runs this function when enter is pressed
+        // newEntry(document.getElementById("input-student").value);
         // console.log(document.getElementById("input-student").value)
   
     }
