@@ -1,5 +1,7 @@
 var studentPool = []
 var groups = []
+var valid = false
+var numberOfGroups = 0
 
 function newEntry() {
     //if the message from the user isn't empty then run 
@@ -30,45 +32,56 @@ function newEntry() {
         // for (var i = 1; i < 8; i++) {
         //     if (messages[messages.length - i])
         //         document.getElementById("chatlog" + i).innerHTML = messages[messages.length - i];
+
+        numberOfGroups = document.getElementById("number_field").value
+
+        console.log(studentPool.length, numberOfGroups)
+
+        if (studentPool.length > numberOfGroups) {
+            valid = true
+            document.getElementById("valid-group").innerHTML = "True"
+        }
     }
 }
 
 function createGroups() {
-    const numberOfGroups = document.getElementById("number_field").value
+    if(valid) {
 
-    for(let i = 0; i < numberOfGroups; i++) {
-        groups.push([])
-    }
-
-    let g = 0
-    while (studentPool.length > 0) {
-
-        if (g >= numberOfGroups) {
-            g = 0
+        for(let i = 0; i < numberOfGroups; i++) {
+            groups.push([])
         }
 
-        const index = Math.floor((Math.random() * studentPool.length))
-        const student = studentPool.splice(index, 1)
-        groups[g].push(student[0])
-        g++
-    }
+        let g = 0
+        while (studentPool.length > 0) {
 
-    str = ""
-
-    for (let i = 0; i < groups.length; i++) {
-        str += "Group " + (i + 1) + "<br></br>"
-        for (let j = 0; j < groups[i].length; j++) {
-            if (j + 1 == groups[i].length) {
-                str += groups[i][j]
-            } else {
-                str += groups[i][j] + ",\n"
+            if (g >= numberOfGroups) {
+                g = 0
             }
-            
+
+            const index = Math.floor((Math.random() * studentPool.length))
+            const student = studentPool.splice(index, 1)
+            groups[g].push(student[0])
+            g++
         }
-        str += "<br></br><br></br>"
+
+        str = ""
+
+        for (let i = 0; i < groups.length; i++) {
+            str += "Group " + (i + 1) + "<br></br>"
+            for (let j = 0; j < groups[i].length; j++) {
+                if (j + 1 == groups[i].length) {
+                    str += groups[i][j]
+                } else {
+                    str += groups[i][j] + ",\n"
+                }
+                
+            }
+            str += "<br></br><br></br>"
+        }
+        document.getElementById("content-group").innerHTML = str
+    } else {
+        alert("You need more students than groups")
     }
-    document.getElementById("content-group").innerHTML = str
-    
 }
 
 
