@@ -20,15 +20,15 @@ function newEntry() {
         // says the message using the text to speech function written below
         // Speech(botMessage);
         //outputs the last few array elements of messages to html
-        let str = ""
+/*         let str = ""
         for (var i = 0; i < studentPool.length; i++) {
             if (i + 1 != studentPool.length) {
                 str += studentPool[i] + ", "
             } else {
                 str += studentPool[i]
             }
-        }
-        document.getElementById("content-pool").innerHTML = str
+        } */
+        document.getElementById("content-pool").innerHTML = arrayToString(studentPool)
         // for (var i = 1; i < 8; i++) {
         //     if (messages[messages.length - i])
         //         document.getElementById("chatlog" + i).innerHTML = messages[messages.length - i];
@@ -48,6 +48,19 @@ function newEntry() {
 }
 
 function createGroups() {
+
+    numberOfGroups = document.getElementById("number_field").value
+
+
+    if (studentPool.length > numberOfGroups) {
+        valid = true
+        document.getElementById("valid-group").innerHTML = "True"
+    } else {
+        valid = false
+        document.getElementById("valid-group").innerHTML = "False"
+    }
+
+
     if(valid) {
 
         for(let i = 0; i < numberOfGroups; i++) {
@@ -67,7 +80,7 @@ function createGroups() {
             g++
         }
 
-        str = ""
+        let str = ""
 
         for (let i = 0; i < groups.length; i++) {
             str += "Group " + (i + 1) + "<br></br>"
@@ -89,7 +102,12 @@ function createGroups() {
 
 function importStudentPool() {
 
-    alert("Import doesn't function yet")
+    // alert("Import doesn't function yet")
+
+    let list = prompt("List of students")
+    studentPool = list.split(", ")
+    document.getElementById("content-pool").innerHTML = arrayToString(studentPool)
+
 
 }
 
@@ -99,7 +117,17 @@ function exportStudentPool() {
 
 }
 
-
+function arrayToString(array) {
+    let str = ""
+    for (var i = 0; i < array.length; i++) {
+        if (i + 1 != array.length) {
+            str += array[i] + ", "
+        } else {
+            str += array[i]
+        }
+    }
+    return str
+}
 
 
 
