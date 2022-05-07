@@ -17,7 +17,15 @@ function newEntry() {
         // says the message using the text to speech function written below
         // Speech(botMessage);
         //outputs the last few array elements of messages to html
-        document.getElementById("content-pool").innerHTML = studentPool
+        let str = ""
+        for (var i = 0; i < studentPool.length; i++) {
+            if (i + 1 != studentPool.length) {
+                str += studentPool[i] + ", "
+            } else {
+                str += studentPool[i]
+            }
+        }
+        document.getElementById("content-pool").innerHTML = str
         // for (var i = 1; i < 8; i++) {
         //     if (messages[messages.length - i])
         //         document.getElementById("chatlog" + i).innerHTML = messages[messages.length - i];
@@ -35,7 +43,7 @@ function newEntry() {
 
 
 document.getElementById("input-student").addEventListener("keydown", (e) => {
-    console.log("test")
+    // console.log("test")
     if (e.keyCode == 13) {
         console.log('enter pressed')
         //runs this function when enter is pressed
