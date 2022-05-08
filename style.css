@@ -1,3 +1,7 @@
+:root {
+    --def-padding: 10px;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -56,3 +60,14 @@
 }
 
 /* TBD */
+
+#content-wrapper {
+    border: black solid 3px;
+    padding: var(--def-padding);
+}
+
+#content-wrapper div{
+    padding: var(--def-padding);
+    border: solid black 3px;
+    margin: 15px 0px;
+}
