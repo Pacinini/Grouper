@@ -8,7 +8,8 @@ function newEntry() {
     //if the message from the user isn't empty then run 
     if (document.getElementById("input-student").value != "") {
 
-        lastUserMessage = document.getElementById("input-student").value.toLowerCase();
+        //lastUserMessage = document.getElementById("input-student").value.toLowerCase();
+        lastUserMessage = document.getElementById("input-student").value;
 
         document.getElementById("input-student").value = "";
 
