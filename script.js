@@ -29,8 +29,12 @@ function createGroups() {
     students = copyArray(studentPool)
     groups = []
 
-    numberOfGroups = document.getElementById("number_field").value
+    if (document.getElementById("number_field").value != "") {
+        numberOfGroups = document.getElementById("number_field").value
+        document.getElementById("group-number").innerHTML = numberOfGroups
+    }
     numberOfStudents = studentPool.length
+
 
 
     if (numberOfGroups < numberOfStudents) {
@@ -96,6 +100,13 @@ function exportStudentPool() {
 
     alert("Export doesn't function yet")
 
+}
+
+function clearStudentPool() {
+    alert("successfully cleared your student pool")
+    studentPool = []
+    document.getElementById("content-pool").innerHTML = "No Students"
+    document.getElementById("student-number").innerHTML = studentPool.length
 }
 
 function arrayToString(array) {
