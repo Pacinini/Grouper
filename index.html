@@ -10,6 +10,16 @@
     </head>
     <body>
 
+        <div id="navigation-wrapper" class="wrapper">
+
+            <ul class="navigation-list">
+
+                <li><a href="./about.html">About</a></li>
+
+            </ul>
+
+        </div>
+
 
         <div id="content-wrapper" class="wrapper">
             <h1 class="content-wrapper-title">Grouper</h1>
@@ -17,21 +27,23 @@
             <br>
 
             <div id="content-pool-wrapper">
-                <p>Student Pool List</p>
-                <p id="content-pool">Student Pool</p>
+                <p>Students</p>
+                <p id="content-pool">No Students</p>
             </div>
 
             <div id="content-group-wrapper">
-                <p>Student Groups</p>
-                <p id="content-group">Student Groups</p>
+                <p>Groups</p>
+                <p id="content-group">&nbsp;</p>
             </div>
         </div>
 
 
         <div id="functionality-wrapper" class="wrapper">
-            <p>Search</p>
-            <input type="text" name="search" id="searchbox" placeholder="search">
+
+            <!-- <p>Search</p> -->
+            <!-- <input type="text" name="search" id="searchbox" placeholder="search"> -->
             <input type="button" onclick="exportStudentPool()" name="export" id="export_button" value="Export Student Pool">
+
             <input type="button" onclick="importStudentPool()" name="import" id="import_button" value="Import Student Pool">
 
 
@@ -39,17 +51,24 @@
 
                 <p>Valid Group:</p>
                 <p id="valid-group">False</p>
+
                 <p>Number of students:</p>
                 <p id="student-number">0</p>
+
+                <p>Number of Groups:</p>
+                <p id="group-number">0</p>
 
             </div>
 
 
-            <input type="button" onclick="createGroups()" name="finalize" id="finalize_button" value="Finalize">
+            <input type="button" onclick="createGroups()" name="finalize" id="finalize_button" value="Generate Groups">
+
         </div>
 
 
         <div id="input-wrapper" class="wrapper">
+
+            <input type="button" onclick="" name="update" id="update-group-number" value="Update Group Count">
 
             <input type="number" name="number" id="number_field" placeholder="Number of student groups" required>
 
