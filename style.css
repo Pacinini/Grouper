@@ -77,7 +77,7 @@ body {
     background-color: green;
 }
 
-/* TBD */
+/* Content */
 
 #content-wrapper {
     /* border: black solid 3px; */
@@ -86,6 +86,17 @@ body {
 
 #content-wrapper div{
     padding: var(--def-padding);
-    border: solid black 3px;
+    /* border: solid black 3px; */
     margin: 15px 0px;
+}
+
+#content-pool-wrapper, #content-group-wrapper{
+    background-color: white;
+    border: solid black 2px;
+    border-radius: 8px;
+}
+
+
+#content-wrapper .desc {
+    text-align: center;
 }
