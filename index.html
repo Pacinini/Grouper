@@ -39,54 +39,47 @@
 
 
 
+        <div class="content-body">
+            <div id="content-wrapper" class="wrapper">
 
-        <div id="content-wrapper" class="wrapper">
+                <div id="content-pool-wrapper">
+                    <p>Students</p>
+                    <p id="content-pool">No Students</p>
+                </div>
 
-            <div id="content-pool-wrapper">
-                <p>Students</p>
-                <p id="content-pool">No Students</p>
+                <div id="content-group-wrapper">
+                    <p>Groups</p>
+                    <div id="content-group">&nbsp;</div>
+                </div>
+
+                <div id="functionality-info-wrapper">
+
+                    <p>Number of students:</p>
+                    <p id="student-number">0</p>
+
+                    <p>Number of Groups:</p>
+                    <p id="group-number">2</p>
+
+                </div>
+
+
+
             </div>
 
-            <div id="content-group-wrapper">
-                <p>Groups</p>
-                <div id="content-group">&nbsp;</div>
-            </div>
+            <div id="input">
 
-            <div id="functionality-info-wrapper">
+                <input type="button" onclick="createGroups()" name="finalize" id="finalize_button" value="Generate Groups">
 
-                <p>Number of students:</p>
-                <p id="student-number">0</p>
+                <input type="button" onclick="clearStudentPool()" name="clear-pool" id="clear-pool" value="Clear Student Pool">
 
-                <p>Number of Groups:</p>
-                <p id="group-number">2</p>
+                <input type="number" name="number" id="number_field" placeholder="Number of student groups" required>
+
+                <input type="text" name="add" id="input-student" placeholder="Type a student's name here to add them to the pool" autofocus>
+
 
             </div>
-
-
-
         </div>
 
-
-        <div id="functionality-wrapper" class="wrapper">
-
-            <!-- <p>Search</p> -->
-            <!-- <input type="text" name="search" id="searchbox" placeholder="search"> -->
-
-
-            <input type="button" onclick="createGroups()" name="finalize" id="finalize_button" value="Generate Groups">
-
-            <input type="button" onclick="clearStudentPool()" name="clear-pool" id="clear-pool" value="Clear Student Pool">
-
-        </div>
-
-
-        <div id="input-wrapper" class="wrapper">
-
-            <input type="number" name="number" id="number_field" placeholder="Number of student groups" required>
-
-            <input type="text" name="add" id="input-student" placeholder="Type a student's name here to add them to the pool" autofocus>
-
-        </div>
 
 
     </body>
