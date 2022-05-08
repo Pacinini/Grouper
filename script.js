@@ -37,14 +37,6 @@ function createGroups() {
 
 
 
-    if (numberOfGroups < numberOfStudents) {
-        valid = true
-        document.getElementById("valid-group").innerHTML = "True"
-    } else {
-        valid = false
-        document.getElementById("valid-group").innerHTML = "False"
-    }
-
 
     if(numberOfGroups < numberOfStudents) {
 
@@ -103,10 +95,11 @@ function exportStudentPool() {
 }
 
 function clearStudentPool() {
-    alert("successfully cleared your student pool")
     studentPool = []
     document.getElementById("content-pool").innerHTML = "No Students"
     document.getElementById("student-number").innerHTML = studentPool.length
+    document.getElementById("content-group").innerHTML = "&nbsp;"
+    alert("successfully cleared your student pool")
 }
 
 function arrayToString(array) {
