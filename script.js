@@ -39,7 +39,7 @@ function createGroups() {
 
 
 
-    if(numberOfGroups < numberOfStudents) {
+    if(numberOfGroups < numberOfStudents && numberOfGroups >= 2) {
 
         for(let i = 0; i < numberOfGroups; i++) {
             groups.push([])
@@ -73,8 +73,10 @@ function createGroups() {
             str += "<br></br><br></br>"
         }
         document.getElementById("content-group").innerHTML = str
-    } else {
+    } else if (numberOfGroups >= numberOfStudents) {
         alert("You need more students than groups")
+    } else if (numberOfGroups < 2) {
+        alert("You need at least two groups")
     }
 }
 
