@@ -10,19 +10,35 @@
     </head>
     <body>
 
-        <div id="navigation-wrapper" class="wrapper">
+        <div class="navigation">
 
             <ul class="navigation-list">
 
-                <li class="navigation-item"><a href="./about.html" class="navigation-item-a">About</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./about.html">Help</a></li>
+
+                <li class="button"><input type="button" value="Sign Up"></li>
+                <li class="button"><input type="button" value="Login"></li>
+
+                <li class="button"><input type="button" onclick="exportStudentPool()" id="export_button" value="Export Student Pool"></li>
+
+                <li class="button"><input type="button" onclick="importStudentPool()" id="import_button" value="Import Student Pool"></li>
 
             </ul>
 
         </div>
 
+        <div class="header">
+
+            <h1>Grouper</h1>
+
+        </div>
+
+
+
 
         <div id="content-wrapper" class="wrapper">
-            <h1 class="content-wrapper-title">Grouper</h1>
+
             <h4 class="content-wrapper-subtitle">Find me at my github <a href="https://github.com/Pacinini" target="_blank">@Pacinini</a></h4>
             <br>
 
@@ -42,9 +58,6 @@
 
             <!-- <p>Search</p> -->
             <!-- <input type="text" name="search" id="searchbox" placeholder="search"> -->
-            <input type="button" onclick="exportStudentPool()" name="export" id="export_button" value="Export Student Pool">
-
-            <input type="button" onclick="importStudentPool()" name="import" id="import_button" value="Import Student Pool">
 
 
             <div id="functionality-info-wrapper">

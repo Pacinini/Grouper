@@ -6,8 +6,53 @@
     text-decoration: none;
 }
 
-.content-wrapper-title {
+/* Header */
+
+.header {
+    border: solid black 3px;
+    padding: 5%;
+    max-height: 30px;
+}
+
+.header h1 {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
+
+/* Navigation */
+
+.navigation ul {
+    list-style-type: none;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navigation li {
+    /* float: left; */
+    text-align: center;
+    float: left;
+}
+
+.navigation .button {
+    float: right;
+}
+
+.navigation a, .navigation input {
+    padding: 14px 16px;
+    color: white;
+    display: block;
+    background-color: black;
+}
+
+.navigation input {
+    border: none;
+    min-height: 46px;
+}
+
+.navigation a:hover, .navigation input:hover {
+    background-color: green;
+}
+
+/* TBD */
