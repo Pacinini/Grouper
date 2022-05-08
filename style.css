@@ -10,10 +10,11 @@
     text-decoration: none;
 }
 
+
 /* Header */
 
 .header {
-    border: solid black 3px;
+    /* border: solid black 3px; */
     padding: 5%;
     max-height: 30px;
 }
@@ -37,6 +38,11 @@
     /* float: left; */
     text-align: center;
     float: left;
+}
+
+.navigation .navbar-icon {
+    float: left;
+    max-height: 46px;
 }
 
 .navigation .button {
