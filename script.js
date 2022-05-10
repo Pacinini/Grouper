@@ -31,7 +31,7 @@ function createGroups() {
     groups = []
 
     if (document.getElementById("number_field").value != "") {
-        numberOfGroups = document.getElementById("number_field").value
+        numberOfGroups = Math.floor(document.getElementById("number_field").value)
         document.getElementById("group-number").innerHTML = numberOfGroups
     }
     numberOfStudents = studentPool.length
